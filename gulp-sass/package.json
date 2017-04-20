@@ -1,0 +1,20 @@
+{
+  "name": "gulp-sass",
+  "version": "1.0.0",
+  "description": "watch sass to css with Gulp Scripts",
+  "main": "gulpfile.js",
+  "scripts": {
+    "packages": "npm i -D gulp gulp-scss",
+    "sass": "gulp watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com/goiblas/workflows.git"
+  },
+  "author": "Jesús Olazagoitia <jesus.designer@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^3.0.0"
+  }
+}
