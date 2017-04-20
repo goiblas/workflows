@@ -1,0 +1,19 @@
+{
+  "name": "npm-sass",
+  "version": "1.0.0",
+  "description": "watch sass to css with NPM Scripts",
+  "main": "package.json",
+  "scripts": {
+    "packages": "npm i -D node-sass",
+    "sass": "node-sass -w -o ./css/ ./scss/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com/goiblas/workflows.git"
+  },
+  "author": "Jesús Olazagoitia <jesus.designer@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.2"
+  }
+}
