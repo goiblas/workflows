@@ -4,7 +4,7 @@
   "description": "watch sass to css with Gulp Scripts",
   "main": "gulpfile.js",
   "scripts": {
-    "packages": "npm i -D gulp gulp-scss",
+    "packages": "npm i -D gulp gulp-sass",
     "sass": "gulp watch:sass"
   },
   "repository": {
