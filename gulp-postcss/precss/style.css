@@ -1,0 +1,6 @@
+@import "_variables";
+@import "_grafico";
+
+body  {
+    background-color: var(--eggshell);
+}

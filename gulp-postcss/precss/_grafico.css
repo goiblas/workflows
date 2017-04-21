@@ -1,0 +1,6 @@
+.customSvg {
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background: svg-load('svg/img.svg', fill: var(--grafColor));
+}

@@ -1,0 +1,9 @@
+:root {
+  --eggshell: #EEE8D6;
+  --grafColor: #8948e1;
+  --font-primary: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+}
