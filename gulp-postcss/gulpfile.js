@@ -1,25 +1,42 @@
 const gulp = require('gulp'),
       postcss = require('gulp-postcss'),
       autoprefixer = require('autoprefixer'),
-      cssvariables = require('postcss-css-variables'),
-      importUrl = require('postcss-import'),
-      postcssInlineSvg = require('postcss-inline-svg'),
-      cssnano = require('gulp-cssnano');
+      cssimport = require('postcss-import'),
+      customproperties = require('postcss-custom-properties'),
+      apply = require('postcss-apply'),
+      mixins = require('postcss-mixins'),
+      nested = require('postcss-nested'),
+      customMedia = require("postcss-custom-media"),
+      nano = require('gulp-cssnano'),
+      postcssInlineSvg = require('postcss-inline-svg');
 
 const plugins = [
-    autoprefixer({browsers: ['last 2 version']}),
-    importUrl,
-    cssvariables,
+    cssimport,
+    autoprefixer,
+    customproperties,
+    apply,
+    mixins,
+    nested,
+    customMedia,
     postcssInlineSvg
 ];
+const configNano = {
+    autoprefixer: { browsers: 'last 2 versions' },
+    discardComments: { removeAll: true },
+    safe: true
+};
 
 gulp.task('css', function() {
 
- return gulp.src('precss/style.css')
+ return gulp.src('precss/**/*.css')
         .pipe(postcss(plugins) )
-        .pipe(cssnano())
-        .pipe(gulp.dest('css/'));
+        .pipe(nano(configNano))
+        .pipe(gulp.dest('css'));
 });
 
+gulp.task('watch', function() {
+    gulp.watch('precss/**/*.css', ['css']);
 
-gulp.task('default', ['css']);
+});
+
+gulp.task('default', ['css', 'watch',]);

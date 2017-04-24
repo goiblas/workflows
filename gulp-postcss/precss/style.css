@@ -1,5 +1,5 @@
-@import "_variables";
-@import "_grafico";
+@import "variables";
+@import "grafico";
 
 body  {
     background-color: var(--eggshell);
